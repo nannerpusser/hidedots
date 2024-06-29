@@ -1,8 +1,6 @@
 import os
 import re
-from rich.console import Console
 
-console = Console()
 
 asciiart = r'''
 
@@ -17,7 +15,7 @@ asciiart = r'''
  `-------'      `-----'    `--'         `--' `--'  `--'   `-------'  `------'`--' '--' 
 
 '''
-console.print(asciiart, style="bold red")
+print(asciiart)
 
 regx = re.compile(r'^\.')
 # list to store filename present in current directory
@@ -37,7 +35,7 @@ print(r"Files and folders present in current directory: " + "\n" + "\n".join(fil
 
  
 while True:
-    user_input = input('Hide files? (y/n): ')
+    user_input = input('Hide files and folders? (y/n): ')
     if user_input == 'y' or user_input == 'Y':
         for file in files:
             os.system(f'attrib +h {file}')
