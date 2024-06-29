@@ -1,4 +1,4 @@
-# DotHider
+## DotHider
 
 Simple script to detect dotfiles and dotfolders in ``cwd`` and set the hidden attribute on them. 
 
